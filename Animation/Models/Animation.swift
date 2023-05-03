@@ -15,7 +15,6 @@ struct Animation {
     let buttonTitle: String
     
     static func updateAnimation() -> [Animation] {
-        
         var randomAnimation: [Animation] = []
         
         let names = DataStore.shared.animationNames.shuffled()
@@ -28,8 +27,9 @@ struct Animation {
         let iterationCount = min(
             names.count,
             curves.count,
-            durations.count
-          
+            forces.count,
+            durations.count,
+            delayTimes.count
         )
         
         for index in 0..<iterationCount {

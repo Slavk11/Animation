@@ -31,7 +31,6 @@ final class MainViewController: UIViewController {
         
         springAnimationView.animate()
         updateLabels()
-        
     }
     
     private func updateLabels() {
