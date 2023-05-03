@@ -16,7 +16,7 @@ struct Animation {
     
     static func updateAnimation() -> [Animation] {
         
-        var testAnimation: [Animation] = []
+        var randomAnimation: [Animation] = []
         
         let names = DataStore.shared.animationNames.shuffled()
         let curves = DataStore.shared.curves.shuffled()
@@ -41,10 +41,10 @@ struct Animation {
                 delay: delayTimes[index],
                 buttonTitle: button
             )
-            testAnimation.append(animation)
+            randomAnimation.append(animation)
             
         }
-        return testAnimation
+        return randomAnimation
     }
 }
 
