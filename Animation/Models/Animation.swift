@@ -13,13 +13,13 @@ struct Animation {
     let delay: Double
     
     var description: String {
-        """
-        preset: \(name)
-        curve: \(curve)
-        force: \(force)
-        duration: \(duration)
-        delay: \(delay)
-        """
+              """
+              preset: \(name)
+              curve: \(curve)
+              force: \(String(format: "%.02f", force))
+              duration: \(String(format: "%.02f", duration))
+              delay: \(String(format: "%.02f", delay))
+              """
     }
     
     static var randomAnimation: Animation {
