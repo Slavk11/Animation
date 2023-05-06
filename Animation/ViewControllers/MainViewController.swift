@@ -9,36 +9,40 @@ import UIKit
 import SpringAnimation
 
 final class MainViewController: UIViewController {
-    @IBOutlet var nextButton: SpringButton!
-    @IBOutlet var springAnimationView: SpringView!
     
-    @IBOutlet var animationLabel: UILabel!
-    @IBOutlet var curveLabel: UILabel!
-    @IBOutlet var forceLabel: UILabel!
-    @IBOutlet var durationLabel: UILabel!
-    @IBOutlet var delayLabel: UILabel!
+    // MARK: - IB Outlets
     
-    private var animation: Animation!
-    
-    @IBAction func nextButtonPressed(_ sender: SpringButton) {
-        animation = Animation.updateAnimation().first
+    @IBOutlet weak var animationView: SpringView!
+    @IBOutlet var animationLabel: SpringLabel! {
         
-        springAnimationView.animation = animation.name
-        springAnimationView.curve = animation.curve
-        springAnimationView.force = animation.force
-        springAnimationView.duration = animation.duration
-        springAnimationView.delay = animation.delay
-        
-        springAnimationView.animate()
-        updateLabels()
+        didSet {
+            animationLabel.text = animation.description
+        }
     }
     
-    private func updateLabels() {
-        nextButton.setTitle(animation.buttonTitle, for: .normal)
-        animationLabel.text = "Preset: \(animation.name)"
-        curveLabel.text = "Curve: \(animation.curve)"
-        forceLabel.text = "Force: \(animation.force.description)"
-        durationLabel.text = "Duration: \(animation.duration.description)"
-        delayLabel.text = "Delay: \(animation.delay.description)"
+    // MARK: - Private properties
+    private var animation = Animation.randomAnimation
+ 
+    // MARK: - IB Actions
+    @IBAction func animationButtonPressed(_ sender: UIButton) {
+        animationLabel.animation = "zoomOut"
+        animationLabel.x = 50
+        animationLabel.animate()
+        animationLabel.text = animation.description
+        
+        animationLabel.animateNext { [unowned self] in
+            animationLabel.animation = "zoomIn"
+            animationLabel.animate()
+            
+            animationView.animation = animation.name
+            animationView.curve = animation.curve
+            animationView.duration = animation.duration
+            animationView.force = animation.force
+            animationView.delay = animation.delay
+            animationView.animate()
+            
+            animation = Animation.randomAnimation
+            sender.setTitle("Run \(animation.name)", for: .normal)
+        }
     }
 }
