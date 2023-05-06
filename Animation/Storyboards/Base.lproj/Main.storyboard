@@ -18,48 +18,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CVI-15-5kD" customClass="SpringView" customModule="SpringAnimation">
                                 <rect key="frame" x="53.5" y="63" width="213" height="176"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="8Q7-cd-lz5">
-                                        <rect key="frame" x="16" y="18" width="48" height="152"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BGY-Cg-Oix">
-                                                <rect key="frame" x="0.0" y="0.0" width="48" height="24"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tQP-Tf-UNd">
-                                                <rect key="frame" x="0.0" y="32" width="48" height="24"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xnJ-UT-oLu">
-                                                <rect key="frame" x="0.0" y="64" width="48" height="24"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zFl-6Y-4dT">
-                                                <rect key="frame" x="0.0" y="96" width="48" height="24"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GwO-98-mm5">
-                                                <rect key="frame" x="0.0" y="128" width="48" height="24"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
                                 <color key="backgroundColor" systemColor="linkColor"/>
-                                <constraints>
-                                    <constraint firstItem="8Q7-cd-lz5" firstAttribute="top" secondItem="CVI-15-5kD" secondAttribute="top" constant="18" id="FdO-NL-AOj"/>
-                                    <constraint firstItem="8Q7-cd-lz5" firstAttribute="leading" secondItem="CVI-15-5kD" secondAttribute="leading" constant="16" id="GKp-NA-SWo"/>
-                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <integer key="value" value="10"/>
@@ -81,6 +40,18 @@
                                     <action selector="nextButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o2V-X2-uL4"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="8Q7-cd-lz5">
+                                <rect key="frame" x="53" y="263" width="48" height="24"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BGY-Cg-Oix">
+                                        <rect key="frame" x="0.0" y="0.0" width="48" height="24"/>
+                                        <color key="backgroundColor" red="0.42288115529999998" green="0.42288115529999998" blue="0.42288115529999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -90,23 +61,21 @@
                             <constraint firstItem="CVI-15-5kD" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="175:466" id="A1v-FU-WwY"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="RHC-6L-SfD" secondAttribute="bottom" multiplier="1.1" id="CWe-3a-JZF"/>
                             <constraint firstItem="CVI-15-5kD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GwT-Vo-Bhp"/>
+                            <constraint firstItem="8Q7-cd-lz5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="263" id="S2u-bt-H8P"/>
                             <constraint firstItem="CVI-15-5kD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="43" id="TKy-Z2-huR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RHC-6L-SfD" secondAttribute="trailing" constant="128" id="UP4-7t-adp"/>
+                            <constraint firstItem="8Q7-cd-lz5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="53" id="xLS-DY-xJQ"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="animationLabel" destination="BGY-Cg-Oix" id="dVg-Rk-EfN"/>
-                        <outlet property="curveLabel" destination="tQP-Tf-UNd" id="WAr-bz-hM9"/>
-                        <outlet property="delayLabel" destination="GwO-98-mm5" id="o6Q-k2-20v"/>
-                        <outlet property="durationLabel" destination="zFl-6Y-4dT" id="Rky-cH-6tx"/>
-                        <outlet property="forceLabel" destination="xnJ-UT-oLu" id="c12-pS-s7G"/>
                         <outlet property="nextButton" destination="RHC-6L-SfD" id="Yge-Fz-eYT"/>
                         <outlet property="springAnimationView" destination="CVI-15-5kD" id="4zr-iY-ah4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="46.046511627906973" y="-2.5751072961373391"/>
+            <point key="canvasLocation" x="56" y="-4"/>
         </scene>
     </scenes>
     <resources>
